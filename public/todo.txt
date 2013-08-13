@@ -1,0 +1,32 @@
+move loading and saving to separate files
+store all fields in cookies
+create good names for consents
+move langs from drop-down to main tabs when a tab is deleted
+chgeck that full description does not contain html tags
+add privacy policy
+add EULA
+mark required fields in some way in HTML (*?)
+when add big APK file or several APK files write which stores support it
+add tabs to full description (plain, feature less, html)
+keyword: move new created on top
+keyword: move focus to just created field
+
+IMAGES
+
+completeXMLstringAt - convert to array with Join
+return error message from ApkParser
+add all needed comments
+remove all unneeded logs
+add copyright
+make that store info section for category appears by default after page is loaded
+
+add price validation to be a number
+Change local price style to append from both sides
+make file input field read only
+make APK file required, disable everything else until APK is added
+
+SPECIFICATION
+remove APK file extensions from the specification
+add tags like in Samsung and Naver
+Maximum length: at least one tag should be shorter than 30 symbols. -> first title should be shorter than 30 symbols
+

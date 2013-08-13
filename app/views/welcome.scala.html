@@ -1,0 +1,74 @@
+@import helper._
+@main(""){
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">AppDF Sample</a>    
+  </div>
+</div>
+<div class="row">
+<div class="hero-unit span9 offset1">
+  <h1>AppDF sample site</h1>
+  <p>This site lets you see how a possible store page might look for you AppDF package</p>
+</div>
+</div>
+<div class="row">
+	<div class="span3 offset1">
+		<p class="text-center">Uses Yandex.Shell as a sample for generating  store page</p>
+	</div>
+	<div class="span3 offset1">
+		<p class="text-center">Let you create your own appdf</p>
+	</div>
+	<div class="span3 offset1">
+		<p class="text-center">Let you upload AppDF to see how a store
+			page could look like</p>
+	</div>
+</div>
+<div class="row">
+	<div class="span3 offset1">
+		<form>
+		<button type="submit" class="btn btn-primary btn-block" id="use-demo" formaction="@routes.Application.useDefault">Use
+			Life app demo</button>
+		</form>
+		
+	</div>
+	<div class="span3 offset1">
+		<form>
+			<button type="submit" class="btn btn-primary btn-block" id="editor"
+				formaction="@routes.Editor.editor">Use AppDF editor</button>
+		</form>
+		<br>
+	</div>
+	<div class="span3 offset1">
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hi
+					dden="true">×</button>
+				<h3 id="myModalLabel">Choose file</h3>
+			</div>
+			<div class="modal-body">
+				@helper.form(action = routes.Application.upload, 'enctype ->
+				"multipart/form-data") { <input type="file" name="picture">
+
+				<p>
+					<input type="submit">
+				</p>
+
+				}
+
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary btn-block" id="upload">Upload</button>
+	</div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+	var showModal = function() {
+		$('#myModal').modal()
+	}
+	$("#upload").click(showModal)
+</script>
+}

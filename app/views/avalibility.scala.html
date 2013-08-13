@@ -1,0 +1,14 @@
+@(aval:org.onepf.appdf.model.Availability)
+@import org.onepf.appdf.model._
+@if(aval != null){
+@if(aval.getIncludeContries() != null){
+<p>Avalible at following countries</p>
+<ul>
+@for(country <- aval.getIncludeContries){
+@if(CountryCatalog.INSTANCE.getByCode(country) != null){
+	<li>@CountryCatalog.INSTANCE.getByCode(country).getName</li>
+}
+}
+</ul>
+}
+}

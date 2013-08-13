@@ -1,0 +1,27 @@
+@* screenshots Template File *@
+@(app:org.onepf.appdf.model.Application,imagesDesc:org.onepf.appdf.model.ImagesDescription)
+  <div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+	<div class="row text-center">
+    <img src="/appdf/images/@imagesDesc.getScreenShots.get(0)" width="200"  height="230">
+	</div>
+    </div>
+	@for(screenshot <- imagesDesc.getScreenShots){
+	<div class="item">
+	<div class="row text-center">
+    <img src="/appdf/images/@screenshot" width="200" height="230">
+	</div>
+	</div>
+	}    
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>

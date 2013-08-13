@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET		/						controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+POST	/upload					controllers.Application.upload
+
+GET		/store					controllers.AppdfPage.apppage
+
+GET		/store/sample			controllers.Application.useDefault
+
+GET		/appdf/images/*fileName 		controllers.Resources.image(fileName)
+
+GET		/appdf/binary/*fileName 		controllers.Resources.binary(fileName)
+
+GET		/editor					controllers.Editor.editor
+
+#GET		/demo					controllers.AppdfPage.

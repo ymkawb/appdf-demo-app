@@ -1,0 +1,23 @@
+@(app:org.onepf.appdf.model.Application)
+@import org.onepf.appdf.model.{Application => AppDFApp}
+@main(app.getMainDescription.getTitles.head){
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">AppDF Sample</a>    
+  </div>
+</div>
+<div class="row">
+  <div class="offset2 span4">
+	@app_info(app)
+  </div>
+  <div class="span8">
+	@description(app,app.getMainDescription)
+	@screenshots(app,app.getMainDescription.getImagesDescription)
+  </div>
+  <div class="span4 offset1">
+	@avalibility(app.getAvalability)
+	@supported_devices(app.getRequirments)
+  </div>
+</div>
+	
+}

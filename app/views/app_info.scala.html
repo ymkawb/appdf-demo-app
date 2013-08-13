@@ -1,0 +1,17 @@
+@* app_info Template File *@
+@(app:org.onepf.appdf.model.Application)
+<div class="row text-center">
+<img src="/appdf/images/@app.getMainDescription.getImagesDescription.getAppIcons.get(0).getName" width="124" height="124"/>
+<h2>@app.getMainDescription.getTitles.head</h2>
+<a class="btn btn-primary" href="@routes.Resources.binary(app.getFilesInfo().getApkFiles().get(0).getFileName)">Download</a>
+<p class="muted">Package name:@app.getPackageName<br/>
+Category:@app.getCategorisation.getCategory.getId</p>
+<address>
+  <strong>Customer support</strong><br>
+  <a href="@app.getCustomerSupport.getWebsite"/>@app.getCustomerSupport.getWebsite</a><br> 
+  <a href="mailto:@app.getCustomerSupport.getEmail">@app.getCustomerSupport.getEmail</a><br>
+  <abbr title="Phone">P:</abbr> @app.getCustomerSupport.getPhone <br>
+</address>
+</div>
+
+

@@ -1,0 +1,22 @@
+@(requirements:org.onepf.appdf.model.Requirments)
+@import org.onepf.appdf.model._
+@if(requirements != null && requirements.getSupportedLanguages != null){
+<p class="text-success">Supported languages</p>
+<ul>
+@for(lang <- requirements.getSupportedLanguages){
+	@if(lang != null && LanguageCatalog.INSTANCE.getByCode(lang) != null){
+	<li>@LanguageCatalog.INSTANCE.getByCode(lang).getName</li>
+	}
+}
+</ul>
+}
+@if(requirements != null && requirements.getSupportedDevices != null){
+<p class="text-success">Supported devices<br>
+<ul>
+
+ @for(device <- requirements.getSupportedDevices){
+ <li>@device</li>
+ }
+</ul>
+</p>
+}
