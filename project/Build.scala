@@ -15,6 +15,5 @@ object ApplicationBuild extends Build {
 
     val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
         resolvers += "Local Maven " at file("repo").toURI.toURL.toString
-//        ,resolvers += "Local Maven " at Path.userHome.asFile.toURI.toURL + ".m2/repository"
     )
 }
